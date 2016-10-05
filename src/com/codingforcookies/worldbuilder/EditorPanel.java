@@ -1,15 +1,15 @@
 package com.codingforcookies.worldbuilder;
 
+import com.codingforcookies.raisin.element.BoxElement;
+import com.codingforcookies.raisin.element.ButtonToggleElement;
+import com.codingforcookies.raisin.element.ElementListElement;
+import com.codingforcookies.raisin.element.Panel;
+import com.codingforcookies.raisin.element.SliderElement;
+import com.codingforcookies.raisin.element.TextElement;
 import com.codingforcookies.worldbuilder.brush.BrushMoisture;
 import com.codingforcookies.worldbuilder.brush.BrushObject;
 import com.codingforcookies.worldbuilder.brush.BrushTerrain;
 import com.codingforcookies.worldbuilder.brush.IBrush;
-import com.codingforcookies.worldbuilder.core.Panel;
-import com.codingforcookies.worldbuilder.core.element.BoxElement;
-import com.codingforcookies.worldbuilder.core.element.ButtonToggleElement;
-import com.codingforcookies.worldbuilder.core.element.ElementListElement;
-import com.codingforcookies.worldbuilder.core.element.SliderElement;
-import com.codingforcookies.worldbuilder.core.element.TextElement;
 
 public class EditorPanel extends Panel {
 	World world;
@@ -33,7 +33,7 @@ public class EditorPanel extends Panel {
 		BoxElement boxBrushSliders;
 		addElement(boxBrushSliders = new BoxElement(0, getHeight() - 45, width, 40));
 		
-		boxBrushSliders.addElement(new TextElement("Size", null, 0, 0, 40, 16));
+		boxBrushSliders.addElement(new TextElement(0, 0, 40, 16).setText("Size"));
 		boxBrushSliders.addElement(new SliderElement(40, 0, width - 50, 16, 150, 1) {
 			@Override
 			public double getCurrent() {
@@ -46,7 +46,7 @@ public class EditorPanel extends Panel {
 			}
 		});
 
-		boxBrushSliders.addElement(new TextElement("Power", null, 0, 23, 40, 16));
+		boxBrushSliders.addElement(new TextElement(0, 23, 40, 16).setText("Power"));
 		boxBrushSliders.addElement(new SliderElement(40, 23, width - 50, 16, 100, 1) {
 			@Override
 			public double getCurrent() {

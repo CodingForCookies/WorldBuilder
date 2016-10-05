@@ -5,7 +5,7 @@ import com.codingforcookies.worldbuilder.World;
 public interface IMapView {
 	boolean is3D();
 	
-	void render(World world, float[] translation, int[] viewSize, double mouseX, double mouseY);
+	void render(World world, float[] translation, float[] viewSize, double mouseX, double mouseY);
 
 	void calculate(World world);
 

@@ -73,7 +73,7 @@ public class MapView3D implements IMapView {
 	}
 	
 	@Override
-	public void render(World world, float[] translation, int[] viewSize, double mouseX, double mouseY) {
+	public void render(World world, float[] translation, float[] viewSize, double mouseX, double mouseY) {
 		if(terrain == null)
 			return;
 		

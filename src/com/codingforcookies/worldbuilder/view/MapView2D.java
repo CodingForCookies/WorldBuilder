@@ -31,7 +31,7 @@ public class MapView2D implements IMapView {
 	public void calculate(World world) { }
 	
 	@Override
-	public void render(World world, float[] translation, int[] viewSize, double mouseX, double mouseY) {
+	public void render(World world, float[] translation, float[] viewSize, double mouseX, double mouseY) {
 		OpenList sites = World.getWorld().getGenerated().getSites();
 		for(int i = 0; i < sites.size; i++) {
 			Site site = sites.array[i];

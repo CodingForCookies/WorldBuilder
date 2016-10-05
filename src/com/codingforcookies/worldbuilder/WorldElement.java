@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
 
-import com.codingforcookies.worldbuilder.core.element.AbstractElement;
-import com.codingforcookies.worldbuilder.core.element.ButtonToggleElement;
+import com.codingforcookies.raisin.element.AbstractElement;
+import com.codingforcookies.raisin.element.ButtonToggleElement;
 import com.codingforcookies.worldbuilder.util.RenderLoading;
 import com.codingforcookies.worldbuilder.view.IMapView;
 import com.codingforcookies.worldbuilder.view.MapView2D;
@@ -167,7 +167,7 @@ public class WorldElement extends AbstractElement {
 			GL11.glTranslatef(-world.getWidth() / 2, 0F, -world.getHeight() / 2);
 		}
 		
-		mapView.render(world, (!is3D() ? new float[] { translate2D[0], translate2D[1] } : translate3D), new int[] { getWidth(), getHeight() }, mouseX, mouseY);
+		mapView.render(world, (!is3D() ? new float[] { translate2D[0], translate2D[1] } : translate3D), new float[] { getWidth(), getHeight() }, mouseX, mouseY);
 
 		if(!mapView.is3D())
 			GL11.glTranslatef(-translate2D[0], -translate2D[1], 0F);

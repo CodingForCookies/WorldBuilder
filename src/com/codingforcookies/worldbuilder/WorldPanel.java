@@ -1,6 +1,6 @@
 package com.codingforcookies.worldbuilder;
 
-import com.codingforcookies.worldbuilder.core.Panel;
+import com.codingforcookies.raisin.element.Panel;
 import com.codingforcookies.worldbuilder.view.MapView3D;
 import com.codingforcookies.worldbuilder.view.MapViewRender;
 

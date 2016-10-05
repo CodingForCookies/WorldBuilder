@@ -2,8 +2,8 @@ package com.codingforcookies.worldbuilder;
 
 import org.lwjgl.opengl.GL11;
 
-import com.codingforcookies.worldbuilder.core.Panel;
-import com.codingforcookies.worldbuilder.core.element.BoxElement;
+import com.codingforcookies.raisin.element.BoxElement;
+import com.codingforcookies.raisin.element.Panel;
 import com.codingforcookies.worldbuilder.generator.SiteBiome;
 import com.codingforcookies.worldbuilder.generator.SiteData;
 import com.codingforcookies.worldbuilder.generator.SiteType;
@@ -17,10 +17,10 @@ public class SidebarPanel extends Panel {
 	private BoxElement box;
 	private boolean open = false;
 	
-	public SidebarPanel(WorldBuilder worldBuilder, int x, int y, int width, int height) {
+	public SidebarPanel(WorldElement worldElement, int x, int y, int width, int height) {
 		super(x, y, width, height);
 		
-		worldElement = worldBuilder.getElement(WorldPanel.class).getElement(WorldElement.class);
+		this.worldElement = worldElement;
 		
 		addElement(box = new BoxElement(15, 95, 180, 80));
 		box.setHidden(true);
